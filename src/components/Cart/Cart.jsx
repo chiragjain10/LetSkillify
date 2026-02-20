@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { MainContext } from './MainProvider'
-import Breadcrumbs from '../../Components/Breadcums.jsx'
+import Breadcrumbs from '../../components/Breadcums.jsx'
 
 const Cart = () => {
     // Parse the cart from localStorage

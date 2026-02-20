@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Breadcrumbs from "../../Components/Breadcums";
+import Breadcrumbs from "../../components/Breadcums";
 import { motion } from "framer-motion";
 const Founder = () => {
   const directors = {
