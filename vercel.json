@@ -27,7 +27,11 @@
     }
   ],
   "functions": {
-    "api/sitemap-xml.js": { "runtime": "nodejs18.x" },
-    "api/sitemap-txt.js": { "runtime": "nodejs18.x" }
+    "api/sitemap-xml.js": {
+      "runtime": "@vercel/node"
+    },
+    "api/sitemap-txt.js": {
+      "runtime": "@vercel/node"
+    }
   }
 }
