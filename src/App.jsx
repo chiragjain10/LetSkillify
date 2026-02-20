@@ -46,14 +46,14 @@ import BlogForm from "./Components/Blog/AddBlogs.jsx";
 import BlogDetail from "./Components/Blog/BlogDetails.jsx";
 
 import "./Components/preloader/preloader.css";
-import AdminLogin from "./components/Admin/AdminLogin.jsx";
-import AdminLayout from "./components/Admin/AdminLayout.jsx";
-import AdminHome from "./components/Admin/AdminHome.jsx";
-import UsersAdmin from "./components/Admin/UsersAdmin.jsx";
-import ActivityForm from "./components/Admin/ActivitiesAdmin.jsx";
-import CelebrationForm from "./components/Admin/CelebrationAdmin.jsx";
-import AdventureForm from "./components/Admin/AdventureAdmin.jsx";
-import TeamForm from "./components/Admin/TeamAdmin.jsx";
+import AdminLogin from "./Components/Admin/AdminLogin.jsx";
+import AdminLayout from "./Components/Admin/AdminLayout.jsx";
+import AdminHome from "./Components/Admin/AdminHome.jsx";
+import UsersAdmin from "./Components/Admin/UsersAdmin.jsx";
+import ActivityForm from "./Components/Admin/ActivitiesAdmin.jsx";
+import CelebrationForm from "./Components/Admin/CelebrationAdmin.jsx";
+import AdventureForm from "./Components/Admin/AdventureAdmin.jsx";
+import TeamForm from "./Components/Admin/TeamAdmin.jsx";
 
 function App() {
   const [bootLoading, setBootLoading] = React.useState(true);
