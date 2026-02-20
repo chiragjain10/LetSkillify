@@ -1,0 +1,203 @@
+/* Enhanced Course Detail Styling with Advanced Hover Effects */
+.tech-stack-detail {
+  background: white;
+  padding: 15px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tech-stack-detail::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    transparent 0deg,
+    rgba(6, 106, 201, 0.3) 45deg,
+    rgba(74, 144, 255, 0.5) 90deg,
+    rgba(6, 106, 201, 0.3) 135deg,
+    transparent 180deg,
+    transparent 360deg
+  );
+  opacity: 0;
+  transition: all 0.6s ease;
+  animation: rotate 4s linear infinite;
+  animation-play-state: paused;
+  z-index: 1;
+}
+
+.tech-stack-detail::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  border-radius: 18px;
+  z-index: 2;
+}
+
+.tech-stack-detail > * {
+  position: relative;
+  z-index: 3;
+}
+
+.tech-stack-detail:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+.tech-stack-detail:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(6, 106, 201, 0.15);
+  border-color: rgb(6, 106, 201);
+}
+
+.tech-stack-detail h6 {
+  color: #2d3748;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.tech-icon-detail {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.tech-icon-detail:hover {
+  transform: scale(1.1);
+}
+
+/* Course Info Enhancements */
+.list-inline-item {
+  background: rgba(6, 106, 201, 0.05);
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin-bottom: 8px !important;
+  transition: all 0.3s ease;
+}
+
+.list-inline-item:hover {
+  background: rgba(6, 106, 201, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Course Image Enhancement with Advanced Hover Effects */
+.video-player {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.video-player::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    transparent 0deg,
+    rgba(6, 106, 201, 0.3) 45deg,
+    rgba(74, 144, 255, 0.5) 90deg,
+    rgba(6, 106, 201, 0.3) 135deg,
+    transparent 180deg,
+    transparent 360deg
+  );
+  opacity: 0;
+  transition: all 0.6s ease;
+  animation: rotate 4s linear infinite;
+  animation-play-state: paused;
+  z-index: 1;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.video-player::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: linear-gradient(145deg, #ffffff, #f8fafc);
+  border-radius: 18px;
+  z-index: 2;
+}
+
+.video-player:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+.video-player:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(6, 106, 201, 0.15);
+  border-color: rgb(6, 106, 201);
+}
+
+.coursedetailimg {
+  width: 100%;
+  height: 400px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 3;
+  transition: transform 0.4s ease;
+}
+
+.video-player:hover .coursedetailimg {
+  transform: scale(1.05);
+}
+
+/* Instructor Avatar Enhancement */
+.avatar-img {
+  border: 3px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.avatar-img:hover {
+  border-color: rgb(6, 106, 201);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tech-stack-detail {
+    padding: 12px;
+  }
+  
+  .tech-icon-detail {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+  
+  .coursedetailimg {
+    height: 250px;
+  }
+}

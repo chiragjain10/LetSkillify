@@ -1,0 +1,102 @@
+[
+    {
+        "id": "1",
+        "title": "NGO1",
+        "description": "This project aims to provide educational resources and support to underprivileged children in rural areas, focusing on enhancing literacy and providing school supplies.",
+        "price": 25000,
+        "review": 4.8,
+        "category": "Ngo",
+        "url": "https://hopefoundation.org.in/programs/skill-development/aws-restart/",
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8eLBojhy_eiFMDSfE0IUPIW7NYEuUV9PKBg&s"
+    },
+    {
+        "id": "2",
+        "title": "NGO2",
+        "description": "A healthcare initiative providing free medical check-ups, vaccinations, and health education to low-income families in urban and rural settings.",
+        "price": 40000,
+        "review": 4.7,
+        "category": "Ngo",
+        "url": "https://lotuspetalfoundation.org/",
+        "thumbnail": "https://pbs.twimg.com/ext_tw_video_thumb/1581509078366490624/pu/img/_3SP6_IHzzecuKBP.jpg"
+    },
+    {
+        "id": "3",
+        "title": "Trignothegym",
+        "description": "A state-of-the-art fitness center offering top-notch equipment, personal training, and various group classes.",
+        "price": 59.99,
+        "review": 4.8,
+        "category": "Gym",
+        "url": "https://trignothegym.com/",
+        "thumbnail": "https://trignothegym.com/assets/images/offer0.jpg"
+    },
+    {
+        "id": "4",
+        "title": "Budget Gym Club",
+        "description": "Affordable gym with essential equipment and basic amenities for fitness enthusiasts on a budget.",
+        "price": 19.99,
+        "review": 4.2,
+        "category": "Gym",
+        "url": "https://bsf-gym.ueniweb.com/",
+        "thumbnail": "https://img.freepik.com/premium-vector/fitness-gym-youtube-thumbnail-web-banner-template_506626-48.jpg"
+    },
+    {
+        "id": "5",
+        "title": "Web Development Bootcamp",
+        "description": "Learn full-stack web development from scratch, including HTML, CSS, JavaScript, and backend technologies. This course covers everything you need to build your own websites and web applications.",
+        "price": "40k",
+        "review": 4.8,
+        "category": "Education",
+        "url": "https://www.designveloper.com/blog/online-web-development-bootcamp/",
+        "thumbnail": "https://www.designveloper.com/wp-content/uploads/2020/08/online-web-development-bootcamp.png"
+    },
+    {
+        "id": "6",
+        "title": "Data Science for Beginners",
+        "description": "A comprehensive introduction to data science, including Python programming, data analysis, and machine learning fundamentals. Perfect for those starting their journey into the data science field.",
+        "price": "45k",
+        "review": 4.6,
+        "category": "Education",
+        "url": "https://tdwi.org/online-learning",
+        "thumbnail": "https://www.designveloper.com/blog/online-web-development-bootcamp/"
+    },
+    {
+        "id": "7",
+        "title": "Luxury Apartment in Downtown",
+        "description": "A spacious 3-bedroom apartment located in the heart of the city, featuring modern amenities, a stunning city view, and easy access to public transportation.",
+        "price": 850000,
+        "review": 4.5,
+        "category": "Real Estate",
+        "url": "https://www.oberoirealty.com/",
+        "thumbnail": "https://d3dy70zhjs5mi1.cloudfront.net/s3fs-public/2023-10/Kolshet-Blog-1022-x-451%20%281%29.jpg"
+    },
+    {
+        "id": "8",
+        "title": "Adani Reality",
+        "description": "A charming 4-bedroom house situated in a quiet suburb, perfect for families. Includes a large backyard, garage, and a fully equipped kitchen.",
+        "category": "Real Estate",
+        "price": 450000,
+        "review": 4.2,
+        "url": "https://www.adanirealty.com/?srsltid=AfmBOoq3BV1zf90QaIG2LYnnSHPJl9o96bP3iczE9l4ksS66wjJ-BWIl",
+        "thumbnail": "https://i.ytimg.com/vi/_jB9xH8FTlw/maxresdefault.jpg"
+    },
+    {
+        "id": "9",
+        "title": "Beach & Adventure",
+        "description": "Experience the best of Bali with this 7-day tour covering beautiful beaches, traditional temples, vibrant markets, and serene landscapes. Enjoy guided tours, cultural performances, and indulge in Balinese cuisine.",
+        "price": 799,
+        "review": 4.8,
+        "category": "Tour & Travels",
+        "url": "https://www.behance.net/search/projects/Travel%20Agency%20Website",
+        "thumbnail": "https://www.picmaker.com/templates/_next/image?url=https%3A%2F%2Fstatic.picmaker.com%2Fscene-prebuilts%2Fthumbnails%2FYT-0090.png&w=3840&q=75"
+    },
+    {
+        "id": "10",
+        "title": "Cultural & Historical",
+        "description": "Explore the charm of Europe with a 10-day tour covering Paris, Rome, and Amsterdam. Witness iconic landmarks like the Eiffel Tower, Colosseum, and the canals of Amsterdam. Includes guided city tours, luxury accommodations, and airport transfers.",
+        "price": 1599,
+        "review": 4.7,
+        "category": "Tour & Travels",
+        "url": " https://www.suntoursntravels.in/",
+        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj_cYLcSfhxSmpBYdWGN2MMpkVsdXYZdVTaQ&s"
+    }
+]

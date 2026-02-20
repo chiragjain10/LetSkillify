@@ -1,0 +1,130 @@
+[
+    {
+      "id": "1",
+      "img": "/public/assets/images/PartenerLogo/LetSkillify_Trans.png",
+      "originalImg": "/public/assets/images/PartenerLogo/LetSkillify_Original.png",
+      "link":"https://letskillify.com/",
+      "ParnerName": "LetSkillify"
+    },
+    {
+      "id": "2",
+      "img": "/assets/images/PartenerLogo/Linga-Fringa_Trans.png",
+      "originalImg": "/assets/images/PartenerLogo/Linga-Fringa_Original.png",
+      "link":"https://linguafranca.in/",
+      "ParnerName": "Linga Fringa"
+    },
+    {
+      "id": "3",
+      "img": "/assets/images/PartenerLogo/CSVTCO_Trans.png",
+      "originalImg": "/assets/images/PartenerLogo/CSVTCO_Original.png",
+      "link":"https://vvu.edu.in/",
+      "ParnerName": "CSVTCO"
+    },
+    {
+      "id": "4",
+      "img": "/assets/images/PartenerLogo/Design-Aspirants_Trans.png",
+      "originalImg": "/assets/images/PartenerLogo/Design-Aspirants_Original.png",
+      "link":"https://designaspirants.com/",
+      "ParnerName": "Design Aspirants"
+    },
+    {
+      "id": "5",
+      "img": "/assets/images/PartenerLogo/HRSS_Trans.png",
+      "originalImg": "/assets/images/PartenerLogo/HRSS_Original.png",
+      "link":"https://hrssbpl.in/",
+      "ParnerName": "HRSS BPL"
+    },
+    {
+      "id": "6",
+      "img": "/assets/images/PartenerLogo/Kailsh-ji_Trans.png",
+      "originalImg": "/assets/images/PartenerLogo/Kailsh-ji_Original.png",
+      "link":"https://anupjalota.com/",
+      "ParnerName": "Anup Jalota"
+    },
+    {
+      "id": "7",
+      "img": "/assets/images/PartenerLogo/Investobazar_Trans.png",
+      "originalImg": "/assets/images/PartenerLogo/Investobazar_Original.png",
+      "link":"https://www.investobazar.com/",
+      "ParnerName": "Investobazar"
+    },
+    {
+      "id": "8",
+      "img": "public/assets/images/PartenerLogo/archaeanpro-Design_Trans.png",
+      "originalImg": "public/assets/images/PartenerLogo/archaeanpro-Design_Original.png",
+      "link":"https://www.archaeanpro.com/",
+      "ParnerName": "ArchaeanPro"
+    },
+
+    {
+      "id": "9",
+      "img": "public/assets/images/PartenerLogo/SMI_Trans.png",
+      "originalImg": "public/assets/images/PartenerLogo/SMI_Original.png",
+      "link":"https://shreemarutiindustries.in/",
+      "ParnerName": "SMI"
+    },
+
+    {
+      "id": "10",
+      "img": "public/assets/images/PartenerLogo/sridhanyaa_Trans.png",
+      "originalImg": "public/assets/images/PartenerLogo/sridhanyaa_Original.png",
+      "link":"https://www.archaeanpro.com/",
+      "ParnerName": "Sridhanyaa"
+    },
+
+    {
+      "id": "11",
+      "img": "public/assets/images/PartenerLogo/The-Tea-Factory_Trans.png",
+      "originalImg": "public/assets/images/PartenerLogo/The-Tea-Factory_Original.png",
+      "link":"https://theteafactorygroup.com/",
+      "ParnerName": "The Tea Factory"
+    },
+
+    {
+      "id": "12",
+      "img": "public/assets/images/PartenerLogo/TUKA_Trans.png",
+      "originalImg": "public/assets/images/PartenerLogo/TUKA_Original.png",
+      "link":"https://www.archaeanpro.com/",
+      "ParnerName": "TUKA"
+    },
+
+    {
+      "id": "13",
+      "img": "public/assets/images/PartenerLogo/Indore-Caterers_Trans.png",
+      "originalImg": "public/assets/images/PartenerLogo/Indore-Caterers_Original.png",
+      "link":"https://www.archaeanpro.com/",
+      "ParnerName": "Indore Caterers"
+    },
+
+    {
+      "id": "14",
+      "img": "public/assets/images/PartenerLogo/HEYLON-TRANS.png",
+      "originalImg": "public/assets/images/PartenerLogo/HEYLON-ORGNL.png",
+      "link":"https://www.heylon.in/",
+      "ParnerName": "HEYLON"
+    },
+
+    {
+      "id": "15",
+      "img": "public/assets/images/PartenerLogo/Healthy-Health_Trans.png",
+      "originalImg": "public/assets/images/PartenerLogo/Healthy-Health_Original.png",
+      "link":"https://www.healthy-health.com/",
+      "ParnerName": "Healthy Health"
+    },
+
+    {
+      "id": "16",
+      "img": "public/assets/images/PartenerLogo/Dr.Pooja-Jain_Trans.png",
+      "originalImg": "public/assets/images/PartenerLogo/Dr.-Pooja-Jain_Original.png",
+      "link":"https://www.drpoojajain.com/",
+      "ParnerName": "Dr. Pooja Jain"
+    },
+
+    {
+      "id": "17",
+      "img": "public/assets/images/PartenerLogo/DBSR-Trans.png",
+      "originalImg": "public/assets/images/PartenerLogo/DBSR-Original.png",
+      "link":"https://www.archaeanpro.com/",
+      "ParnerName": "DBSR"
+    }
+  ]

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Carolyn Ortiz",
+        "position": "Designer",
+        "rating": 4.5,
+        "image": "assets/images/avatar/01.jpg"
+    },
+    {
+        "name": "Dennis Barrett",
+        "position": "IT Professor",
+        "rating": 4.5,
+        "image": "assets/images/avatar/02.jpg"
+    },
+    {
+        "name": "Frances Guerrero",
+        "position": "Developer",
+        "rating": 5,
+        "image": "assets/images/avatar/09.jpg"
+    },
+    {
+        "name": "Larry Lawson",
+        "position": "Designer",
+        "rating": 4.5,
+        "image": "assets/images/avatar/04.jpg"
+    },
+    {
+        "name": "Louis Crawford",
+        "position": "Medical Professor",
+        "rating": 4.5,
+        "image": "assets/images/avatar/10.jpg"
+    }
+]

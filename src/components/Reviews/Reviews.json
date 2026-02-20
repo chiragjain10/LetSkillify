@@ -1,0 +1,222 @@
+[
+    {
+        "id": "1",
+        "name": "Mohini Patel",
+        "disc": "Letskillify helped me turn my passion into a profession! The course content is top-notch, and the instructors are always available to guide you. I loved how interactive the classes were. Highly recommend it for anyone serious about upgrading their skills!",
+        "rating": "5.0",
+        "img": "/assets/images/review/mohini.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "2",
+        "name": "Sannidhya  Garani",
+        "disc": "The best thing about Letskillify is the variety of courses offered. Whether you’re into programming, marketing, or data science, there's something for everyone. The practical assignments and real-world projects gave me the confidence to apply my skills in the job market.",
+        "rating": "4.8",
+        "img": "/assets/images/review/sannidhya.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "3",
+        "name": "Tushar kaithawas ",
+        "disc": "Letskillify changed the way I look at education. The lessons are concise, clear, and straight to the point. Plus, the additional resources provided are very useful. I’m much more confident in my career path thanks to this platform!",
+        "rating": "4.5",
+        "img": "/assets/images/review/tushar k.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "4",
+        "name": "Yash chouhan",
+        "disc": "The projects and real-time feedback at Letskillify are amazing. Every course I took was practical and focused on skills that are in demand in the industry. I now feel ready to take on challenges in my field with the knowledge I’ve gained here.",
+        "rating": "4.3",
+        "img": "/assets/images/review/yash.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "5",
+        "name": "Khushi Maheshwari",
+        "disc": "I was skeptical about online learning until I joined Letskillify. The instructors are so engaging, and the community support is incredible. I’ve met so many like-minded students, and we all help each other grow. The certifications have also boosted my resume!",
+        "rating": "5.0",
+        "img":"/assets/images/review/khushi Maheshwar.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "6",
+        "name": "Abhay Rajput",
+        "disc": "I was looking for a platform that offered flexibility in learning, and Letskillify exceeded my expectations. The courses are well-structured, and I could learn at my own pace while juggling my busy schedule. I’ve already landed an internship because of what I learned here!",
+        "rating": "4.1",
+        "img": "/assets/images/review/abhay rajput.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "7",
+        "name": "Priyanka Sharma ",
+        "disc": "What sets Letskillify apart is the constant updates to the course content. The platform stays relevant with the latest trends, and I always felt like I was learning the most up-to-date information. Plus, their support team is incredibly responsive and helpful.",
+        "rating": "4.5",
+        "img": "/assets/images/review/Priyanka sharma.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "8",
+        "name": "Shakir Khan",
+        "disc": "I was looking for a platform that offered flexibility in learning, and Letskillify exceeded my expectations. The courses are well-structured, and I could learn at my own pace while juggling my busy schedule. I’ve already landed an internship because of what I learned here!",
+        "rating": "4.8",
+        "img": "/assets/images/review/shakirkhan.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "9",
+        "name": "Dhanmendra Pindare",
+        "disc": "Letskillify offers a fantastic blend of theory and practical applications. The instructors break down complex concepts into easy-to-understand lessons. I particularly enjoyed the flexibility of the courses, which allowed me to balance my studies with my job.",
+        "rating": "4.2",
+        "img": "/assets/images/review/Dhanmendra Pindare.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "10",
+        "name": "Mahak Parihal",
+        "disc": "Letskillify has been the perfect platform for me to upskill at my own pace. The detailed explanations and real-world case studies helped me grasp even the most challenging topics. It's truly a well-rounded learning experience that I’d recommend to anyone looking to learn something new.",
+        "rating": "4.5",
+        "img": "/assets/images/review/mahak.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "11",
+        "name": "Saloni Porwal",
+        "disc": "I absolutely love the learning environment at Letskillify. The supportive community and knowledgeable instructors have made my journey enjoyable and productive. The structured courses made it easy for me to keep track of my progress and improve steadily.",
+        "rating": "5.0",
+        "img": "/assets/images/review/saloni.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "12",
+        "name": "Rishiraj lowvanshi",
+        "disc": "As someone transitioning into a new field, Letskillify was a game-changer. The hands-on projects, quizzes, and peer interactions kept me motivated throughout. I could see my progress week by week, and I’m now confident in applying these skills to real-world challenges.",
+        "rating": "4.9",
+        "img": "/assets/images/review/rishiraj lovanshi.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "13",
+        "name": "Rani Gour",
+        "disc": "LetsKillify is a game-changer for anyone serious about learning. The platform offers a wide range of courses with detailed, easy-to-understand lessons that help students grasp even the most complex concepts. The instructors are highly knowledgeable, and the interactive format makes learning engaging and fun. Highly recommend it!",
+        "rating": "4.5",
+        "img": "/assets/images/review/rani gour.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "14",
+        "name": "Meet Shah",
+        "disc": "As a working professional, I found LetsKillify to be extremely flexible and convenient. The self-paced courses allowed me to balance my work and studies effectively. I love how the platform consistently updates its curriculum to keep up with industry trends, making sure learners are always ahead.",
+        "rating": "4.6",
+        "img": "/assets/images/review/meet.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "15",
+        "name": "Gourav Sharma",
+        "disc": "What stands out the most about LetsKillify is the personalized attention. The instructors and the support team are always there to help and provide feedback on assignments. It’s not just about watching videos; it's about truly learning, applying, and growing.",
+        "rating": "4.7",
+        "img": "/assets/images/review/gourav sharma.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "16",
+        "name": "Anjali Gour",
+        "disc": "The quality of the courses on LetsKillify is unparalleled. The content is well-structured, and the platform is user-friendly, making it easy to navigate through different lessons. I love how the platform offers both beginner and advanced courses, catering to learners at every stage.",
+        "rating": "4.5",
+        "img": "/assets/images/review/anjali gour.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "17",
+        "name": "Vinay Sharma",
+        "disc": "The community at LetsKillify is incredibly supportive. Being able to connect with like-minded students and instructors through discussion forums has been a major advantage. It feels like a close-knit learning environment where everyone is rooting for your success.",
+        "rating": "4.2",
+        "img": "/assets/images/eview/VinayS.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "18",
+        "name": "Rahul Kumawat",
+        "disc": "One of the best investments I made in my education was enrolling in courses on LetsKillify. The certificates are recognized by top companies, and the knowledge I gained helped me secure my dream job. The platform truly empowers learners to build their careers.",
+        "rating": "4.1",
+        "img": "/assets/images/review/Rahul Kumawat.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "19",
+        "name": "Navin shonel",
+        "disc": "I was impressed by the diversity of courses available on LetsKillify. From marketing to programming, they have it all. The interactive quizzes and assessments make sure you stay on track and measure your progress. I couldn’t have asked for a better learning experience!",
+        "rating": "4.6",
+        "img": "/assets/images/review/Navin shonel.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "20",
+        "name": "Mukul Pendharkar",
+        "disc": "LetsKillify provides a perfect blend of theory and practical skills. I completed a course in data science and was amazed by how the course prepared me for real-world challenges. The live projects were a great way to reinforce what I learned.",
+        "rating": "4.3",
+        "img": "/assets/images/review/Mukul Pendharkar.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "21",
+        "name": "Gourav Dawar",
+        "disc": "What makes LetsKillify stand out is the mentorship program. I was able to connect with industry experts who provided invaluable insights and career advice. The guidance I received through this platform has been crucial to my professional growth.",
+        "rating": "4.9",
+        "img": "/assets/images/review/gourav sir.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    },
+    {
+        "id": "22",
+        "name": "Bhumi Jain",
+        "disc": "The best part about LetsKillify is the practical approach to learning. The hands-on projects really helped me apply theoretical knowledge in real-life scenarios, which gave me the confidence to take on new challenges in my career. I’m truly grateful for the learning experience here!",
+        "rating": "4.0",
+        "img": "/assets/images/review/bhumi jain.webp",
+        "time": "at 6:01 am",
+        "date": "June 11, 2021"
+
+    }
+]

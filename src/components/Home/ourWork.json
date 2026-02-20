@@ -1,0 +1,152 @@
+[
+ 
+    {
+      "id": "5",
+      "name": "Education Mandal",
+      "img": "/assets/images/OurWorkImage/Educationwork.png",
+      "link":"https://uat.educationmandal.com/"
+    },
+    {
+      "id": "7",
+      "name": "Investo Bazar",
+      "img": "public/assets/images/ClientSiteMockupImages/InvestoBazar_Multi-Screen.png",
+      "link":"https://www.investobazar.com/"
+    },
+    {
+      "id": "3",
+      "name": "Anup Jalota",
+      "img": "public/assets/images/ClientSiteMockupImages/Anup-Jalota-Mockup.png",
+      "link":"https://anupjalota.com/"
+    },
+    {
+      "id": "6",
+      "name": "HRSS Services",
+      "img": "/assets/images/OurWorkImage/Hrsswork.png",
+      "link":"https://hrssbpl.in/"
+    },
+    {
+      "id": "4",
+      "name": "Design Aspirants",
+      "img": "public/assets/images/ClientSiteMockupImages/Designaspirants-Mouckup.png",
+      "link":"https://designaspirants.com/"
+    },
+    {
+      "id": "8",
+      "name": "Virtual Voyage",
+      "img": "/assets/images/OurWorkImage/vvuwork.png",
+      "link":"https://vvu.edu.in/"
+
+    },
+    {
+      "id": "2",
+      "name": "Albeli Jewellery",
+      "img": "/assets/images/OurWorkImage/albelijewellerywork.png",
+      "link":"https://albelijewellery.in/"
+    },
+
+    {
+      "id": "1",
+      "name": "Archaenpro Design`",
+      "img": "public/assets/images/ClientSiteMockupImages/Archaenpro-Webiste-Mockup.png",
+      "link":"https://www.archaeanpro.in/"
+    },
+
+    {
+      "id": "9",
+      "name": "Dr Pooja Jain Indore",
+      "img": "/assets/images/ClientSiteMockupImages/Dr-PoojaJain-Indore-Mockup.png",
+      "link":"https://albelijewellery.in/"
+    },
+
+    {
+      "id": "10",
+      "name": "DBSR College",
+      "img": "public/assets/images/ClientSiteMockupImages/DBSR-College-Mockup.png",
+      "link":"https://albelijewellery.in/"
+    },
+
+    {
+      "id": "11",
+      "name": "Healthy Health",
+      "img": "public/assets/images/ClientSiteMockupImages/healthy-health-Webiste-Mockup.png",
+      "link":"https://www.healthy-health.com/"
+    },
+    {
+      "id": "12",
+      "name": "HEYLON",
+      "img": "public/assets/images/ClientSiteMockupImages/heylon-Webiste-Mockup.png",
+      "link":"https://www.heylon.in/"
+    },
+
+    {
+      "id": "13",
+      "name": "Indore Caterers",
+      "img": "public/assets/images/ClientSiteMockupImages/indore-caterers-Mockup.png",
+      "link":"https://albelijewellery.in/"
+    },
+
+    {
+      "id": "14",
+      "name": "Kailash Ji",
+      "img": "public/assets/images/ClientSiteMockupImages/Kailash-Ji-Site-Mockup.png",
+      "link":"https://kailashonline.in/"
+    },
+
+    {
+      "id": "15",
+      "name": "LetSkillify",
+      "img": "public/assets/images/ClientSiteMockupImages/Letskillify-Mockup.png",
+      "link":"https://letskillify.com/"
+    },
+
+    {
+      "id": "16",
+      "name": "Linga Franca",
+      "img": "public/assets/images/ClientSiteMockupImages/Linga-Franca-Mockup.png",
+      "link":"https://linguafranca.in/"
+    },
+
+
+    {
+      "id": "17",
+      "name": "Priya Events",
+      "img": "public/assets/images/ClientSiteMockupImages/priyaevents-Webiste-Mockup.png",
+      "link":"https://priyaevents.com/"
+    },
+
+    {
+      "id": "18",
+      "name": "SMI",
+      "img": "public/assets/images/ClientSiteMockupImages/SMI-Website-Site-Desktop-Mockup.png",
+      "link":"https://shreemarutiindustries.in/"
+    }, 
+
+    {
+      "id": "19",
+      "name": "The Tea Factory",
+      "img": "public/assets/images/ClientSiteMockupImages/The-Tea-Factory-Mockup.png",
+      "link":"https://theteafactorygroup.com/"
+    },
+
+    {
+      "id": "20",
+      "name": "Sridhanyaa",
+      "img": "public/assets/images/ClientSiteMockupImages/sridhanyaa-Webiste-Mockup.png",
+      "link":"https://albelijewellery.in/"
+    },
+
+    {
+      "id": "21",
+      "name": "The Modesse",
+      "img": "public/assets/images/ClientSiteMockupImages/image.png",
+      "link":"https://themodesse.com/"
+    },
+
+    {
+      "id": "22",
+      "name": "BS Glow",
+      "img": "public/assets/images/ClientSiteMockupImages/bsGlow.png",
+      "link":"https://bsglow.com/"
+    }
+
+    ]
