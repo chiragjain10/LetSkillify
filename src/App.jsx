@@ -10,50 +10,50 @@ import ContactUs from "./components/Contact/ContactUs.jsx";
 import About from "./components/About/About.jsx";
 import CoursesList from "./components/Courses/CoursesList.jsx";
 import TopScroll from "./components/TopScroll.jsx";
-import CourseDetail from "./components/Courses/CourseDetail.jsx";
-import Products from "./components/Products/Products.jsx";
-import ProductsDetail from "./components/Products/ProductsDetails.jsx";
-import Templates from "./components/AllTemplates/Templates.jsx";
-import Review from "./components/Reviews/Review.jsx";
-import SignUp from "./components/Auth/SignUp.jsx";
-import Login from "./components/Auth/Login.jsx";
-import TemplatesDetail from "./components/AllTemplates/TemplatesDetailDynamic.jsx";
-import Privacy from "./components/Pages/Privacy.jsx";
-import Disclaimer from "./components/Pages/Disclaimer.jsx";
-import TermCondition from "./components/Pages/TermCondition.jsx";
-import Member from "./components/Became A member/Member.jsx";
-import Cart from "./components/Cart/Cart.jsx";
-import { MainProvider } from "./components/Cart/MainProvider.jsx";
-import NotFound from "./components/NotFound/NotFound.jsx";
-import Wishlist from "./components/wishlist/wishlist.jsx";
-import Preloader from "./components/preloader/preloader.jsx";
-import Celebration from "./components/Home/Celebration.jsx";
-import Activities from "./components/Home/Activities.jsx";
-import AdventureImage from "./components/Home/Adventure.jsx";
-import Certificate from "./components/About/Certificate.jsx";
-import Founder from "./components/About/Founder.jsx";
-import Offering from "./components/About/Offering.jsx";
-import TeamMember from "./components/About/TeamMember.jsx";
-import AdminDashboard from "./components/Admin/Admin.jsx";
-import ForgetPassword from "./components/Auth/ForgetPassword.jsx";
-import CourseAdmin from "./components/Admin/CourseAdmin.jsx";
-import WorksAdmin from "./components/Admin/WorksAdmin.jsx";
-import PartnersAdmin from "./components/Admin/PartnersAdmin.jsx";
-import TemplatesAdmin from "./components/Admin/TemplatesAdmin.jsx";
-import CertificateAdmin from "./components/Admin/CertificateAdmin.jsx";
-import BlogPage from "./components/Blog/Blogs.jsx";
-import BlogForm from "./components/Blog/AddBlogs.jsx";
-import BlogDetail from "./components/Blog/BlogDetails.jsx";
 
-import "./components/preloader/preloader.css";
-import AdminLogin from "./components/Admin/AdminLogin.jsx";
-import AdminLayout from "./components/Admin/AdminLayout.jsx";
-import AdminHome from "./components/Admin/AdminHome.jsx";
-import UsersAdmin from "./components/Admin/UsersAdmin.jsx";
-import ActivityForm from "./components/Admin/ActivitiesAdmin.jsx";
-import CelebrationForm from "./components/Admin/CelebrationAdmin.jsx";
-import AdventureForm from "./components/Admin/AdventureAdmin.jsx";
-import TeamForm from "./components/Admin/TeamAdmin.jsx";
+// Lazy load heavy components
+const CourseDetail = lazy(() => import("./components/Courses/CourseDetail.jsx"));
+const Products = lazy(() => import("./components/Products/Products.jsx"));
+const ProductsDetail = lazy(() => import("./components/Products/ProductsDetails.jsx"));
+const Templates = lazy(() => import("./components/AllTemplates/Templates.jsx"));
+const Review = lazy(() => import("./components/Reviews/Review.jsx"));
+const SignUp = lazy(() => import("./components/Auth/SignUp.jsx"));
+const Login = lazy(() => import("./components/Auth/Login.jsx"));
+const TemplatesDetail = lazy(() => import("./components/AllTemplates/TemplatesDetailDynamic.jsx"));
+const Privacy = lazy(() => import("./components/Pages/Privacy.jsx"));
+const Disclaimer = lazy(() => import("./components/Pages/Disclaimer.jsx"));
+const TermCondition = lazy(() => import("./components/Pages/TermCondition.jsx"));
+const Member = lazy(() => import("./components/Became A member/Member.jsx"));
+const Cart = lazy(() => import("./components/Cart/Cart.jsx"));
+import { MainProvider } from "./components/Cart/MainProvider.jsx";
+const NotFound = lazy(() => import("./components/NotFound/NotFound.jsx"));
+const Wishlist = lazy(() => import("./components/wishlist/wishlist.jsx"));
+const Preloader = lazy(() => import("./components/preloader/preloader.jsx"));
+const Celebration = lazy(() => import("./components/Home/Celebration.jsx"));
+const Activities = lazy(() => import("./components/Home/Activities.jsx"));
+const AdventureImage = lazy(() => import("./components/Home/Adventure.jsx"));
+const Certificate = lazy(() => import("./components/About/Certificate.jsx"));
+const Founder = lazy(() => import("./components/About/Founder.jsx"));
+const Offering = lazy(() => import("./components/About/Offering.jsx"));
+const TeamMember = lazy(() => import("./components/About/TeamMember.jsx"));
+const AdminDashboard = lazy(() => import("./components/Admin/Admin.jsx"));
+const ForgetPassword = lazy(() => import("./components/Auth/ForgetPassword.jsx"));
+const CourseAdmin = lazy(() => import("./components/Admin/CourseAdmin.jsx"));
+const WorksAdmin = lazy(() => import("./components/Admin/WorksAdmin.jsx"));
+const PartnersAdmin = lazy(() => import("./components/Admin/PartnersAdmin.jsx"));
+const TemplatesAdmin = lazy(() => import("./components/Admin/TemplatesAdmin.jsx"));
+const CertificateAdmin = lazy(() => import("./components/Admin/CertificateAdmin.jsx"));
+const BlogPage = lazy(() => import("./components/Blog/Blogs.jsx"));
+const BlogForm = lazy(() => import("./components/Blog/AddBlogs.jsx"));
+const BlogDetail = lazy(() => import("./components/Blog/BlogDetails.jsx"));
+const AdminLogin = lazy(() => import("./components/Admin/AdminLogin.jsx"));
+const AdminLayout = lazy(() => import("./components/Admin/AdminLayout.jsx"));
+const AdminHome = lazy(() => import("./components/Admin/AdminHome.jsx"));
+const UsersAdmin = lazy(() => import("./components/Admin/UsersAdmin.jsx"));
+const ActivityForm = lazy(() => import("./components/Admin/ActivitiesAdmin.jsx"));
+const CelebrationForm = lazy(() => import("./components/Admin/CelebrationAdmin.jsx"));
+const AdventureForm = lazy(() => import("./components/Admin/AdventureAdmin.jsx"));
+const TeamForm = lazy(() => import("./components/Admin/TeamAdmin.jsx"));
 
 function App() {
   const [bootLoading, setBootLoading] = React.useState(true);
@@ -77,60 +77,61 @@ function App() {
             <HelmetProvider>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/courses" element={<CoursesList />} />
-                <Route path="/blogs" element={<BlogPage />} />
+                <Route path="/about" element={<Suspense fallback={<div>Loading...</div>}><About /></Suspense>} />
+                <Route path="/courses" element={<Suspense fallback={<div>Loading...</div>}><CoursesList /></Suspense>} />
+                <Route path="/blogs" element={<Suspense fallback={<div>Loading...</div>}><BlogPage /></Suspense>} />
 
                 <Route
-                  path="/courses/courseDetails/" element={<CourseDetail />} />
+                  path="/courses/courseDetails/"
+                  element={<Suspense fallback={<div>Loading...</div>}><CourseDetail /></Suspense>}
+                />
 
-
-                <Route path="/products" element={<Products />} />
+                <Route path="/products" element={<Suspense fallback={<div>Loading...</div>}><Products /></Suspense>} />
                 <Route
                   path="/products/productdetails/:id"
-                  element={<ProductsDetail />}
+                  element={<Suspense fallback={<div>Loading...</div>}><ProductsDetail /></Suspense>}
                 />
-                <Route path="/templates" element={<Templates />} />
+                <Route path="/templates" element={<Suspense fallback={<div>Loading...</div>}><Templates /></Suspense>} />
                 <Route
                   path="/templates/TemplatesDetail/:id"
-                  element={<TemplatesDetail />}
+                  element={<Suspense fallback={<div>Loading...</div>}><TemplatesDetail /></Suspense>}
                 />
-                <Route path="/contact" element={<ContactUs />} />
-                <Route path="/feedbacks" element={<Review />} />
-                <Route path="/founder" element={<Founder />} />
-                <Route path="/teammember" element={<TeamMember />} />
-                <Route path="/offering" element={<Offering />} />
-                <Route path="/certificate" element={<Certificate />} />
-                <Route path="/privacypolicy" element={<Privacy />} />
-                <Route path="/disclaimer" element={<Disclaimer />} />
-                <Route path="/term&Condition" element={<TermCondition />} />
-                <Route path="/becamemember" element={<Member />} />
-                <Route path="/signup" element={<SignUp />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/wishlist" element={<Wishlist />} />
-                <Route path="/courses/courseDetails/:slug" element={<CourseDetail />} />
-                <Route path="/adminlogin" element={<AdminLogin />} />
+                <Route path="/contact" element={<Suspense fallback={<div>Loading...</div>}><ContactUs /></Suspense>} />
+                <Route path="/feedbacks" element={<Suspense fallback={<div>Loading...</div>}><Review /></Suspense>} />
+                <Route path="/founder" element={<Suspense fallback={<div>Loading...</div>}><Founder /></Suspense>} />
+                <Route path="/teammember" element={<Suspense fallback={<div>Loading...</div>}><TeamMember /></Suspense>} />
+                <Route path="/offering" element={<Suspense fallback={<div>Loading...</div>}><Offering /></Suspense>} />
+                <Route path="/certificate" element={<Suspense fallback={<div>Loading...</div>}><Certificate /></Suspense>} />
+                <Route path="/privacypolicy" element={<Suspense fallback={<div>Loading...</div>}><Privacy /></Suspense>} />
+                <Route path="/disclaimer" element={<Suspense fallback={<div>Loading...</div>}><Disclaimer /></Suspense>} />
+                <Route path="/term&Condition" element={<Suspense fallback={<div>Loading...</div>}><TermCondition /></Suspense>} />
+                <Route path="/becamemember" element={<Suspense fallback={<div>Loading...</div>}><Member /></Suspense>} />
+                <Route path="/signup" element={<Suspense fallback={<div>Loading...</div>}><SignUp /></Suspense>} />
+                <Route path="/login" element={<Suspense fallback={<div>Loading...</div>}><Login /></Suspense>} />
+                <Route path="/cart" element={<Suspense fallback={<div>Loading...</div>}><Cart /></Suspense>} />
+                <Route path="/wishlist" element={<Suspense fallback={<div>Loading...</div>}><Wishlist /></Suspense>} />
+                <Route path="/courses/courseDetails/:slug" element={<Suspense fallback={<div>Loading...</div>}><CourseDetail /></Suspense>} />
+                <Route path="/adminlogin" element={<Suspense fallback={<div>Loading...</div>}><AdminLogin /></Suspense>} />
 
-                <Route path="/celebration" element={<Celebration />} />
-                <Route path="/activities" element={<Activities />} />
-                <Route path="/adventure" element={<AdventureImage />} />
-                <Route path="/admin_dash" element={<AdminDashboard />} />
-                <Route path="/forgetpassword" element={<ForgetPassword />} />
+                <Route path="/celebration" element={<Suspense fallback={<div>Loading...</div>}><Celebration /></Suspense>} />
+                <Route path="/activities" element={<Suspense fallback={<div>Loading...</div>}><Activities /></Suspense>} />
+                <Route path="/adventure" element={<Suspense fallback={<div>Loading...</div>}><AdventureImage /></Suspense>} />
+                <Route path="/admin_dash" element={<Suspense fallback={<div>Loading...</div>}><AdminDashboard /></Suspense>} />
+                <Route path="/forgetpassword" element={<Suspense fallback={<div>Loading...</div>}><ForgetPassword /></Suspense>} />
                 {/* Admin area with persistent sidebar */}
                 <Route path="/admin" element={<AdminLayout />}>
-                  <Route index element={<AdminHome />} />
-                  <Route path="users" element={<UsersAdmin />} />
-                  <Route path="courses" element={<CourseAdmin />} />
-                  <Route path="works" element={<WorksAdmin />} />
-                  <Route path="partners" element={<PartnersAdmin />} />
-                  <Route path="templates" element={<TemplatesAdmin />} />
-                  <Route path="certificates" element={<CertificateAdmin />} />
-                  <Route path="blogs" element={<BlogForm />} />
-                  <Route path="activities" element={<ActivityForm />} />
-                  <Route path="celebrations" element={<CelebrationForm />} />
-                  <Route path="adventures" element={<AdventureForm />} />
-                  <Route path="team" element={<TeamForm />} />
+                  <Route index element={<Suspense fallback={<div>Loading...</div>}><AdminHome /></Suspense>} />
+                  <Route path="users" element={<Suspense fallback={<div>Loading...</div>}><UsersAdmin /></Suspense>} />
+                  <Route path="courses" element={<Suspense fallback={<div>Loading...</div>}><CourseAdmin /></Suspense>} />
+                  <Route path="works" element={<Suspense fallback={<div>Loading...</div>}><WorksAdmin /></Suspense>} />
+                  <Route path="partners" element={<Suspense fallback={<div>Loading...</div>}><PartnersAdmin /></Suspense>} />
+                  <Route path="templates" element={<Suspense fallback={<div>Loading...</div>}><TemplatesAdmin /></Suspense>} />
+                  <Route path="certificates" element={<Suspense fallback={<div>Loading...</div>}><CertificateAdmin /></Suspense>} />
+                  <Route path="blogs" element={<Suspense fallback={<div>Loading...</div>}><BlogForm /></Suspense>} />
+                  <Route path="activities" element={<Suspense fallback={<div>Loading...</div>}><ActivityForm /></Suspense>} />
+                  <Route path="celebrations" element={<Suspense fallback={<div>Loading...</div>}><CelebrationForm /></Suspense>} />
+                  <Route path="adventures" element={<Suspense fallback={<div>Loading...</div>}><AdventureForm /></Suspense>} />
+                  <Route path="team" element={<Suspense fallback={<div>Loading...</div>}><TeamForm /></Suspense>} />
                 </Route>
                 <Route path="/blog/:id" element={<BlogDetail />} />
                 <Route path="/*" element={<NotFound />} />
