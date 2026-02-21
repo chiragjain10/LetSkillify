@@ -1,4 +1,4 @@
-import { defineConfig, loadEnv } from 'vite'
+import { defineConfig, loadEnv, splitVendorChunkPlugin } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig(({ mode }) => {
@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       react(),
+      splitVendorChunkPlugin(),
     ],
     define: {
       __APP_ENV__: JSON.stringify(env.APP_ENV),
@@ -23,28 +24,18 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         output: {
           manualChunks(id) {
-            // Firebase and other heavy libraries
-            if (id.includes('firebase')) {
-              return 'vendor-firebase'
-            }
-            // React ecosystem
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
-              return 'vendor-react'
-            }
-            // MUI and emotion
-            if (id.includes('@mui') || id.includes('@emotion')) {
-              return 'vendor-mui'
-            }
-            // Animation libraries
-            if (id.includes('framer-motion') || id.includes('lottie')) {
-              return 'vendor-anim'
-            }
-            // Other vendor libraries
-            if (id.includes('node_modules')) {
-              return 'vendor'
-            }
-            // App code
-            return 'app'
+            if (!id.includes('node_modules')) return
+            if (id.includes('firebase')) return 'vendor-firebase'
+            if (id.includes('react-dom') || id.includes('react-router') || /node_modules[\\/](react)[\\/]/.test(id)) return 'vendor-react'
+            if (id.includes('@mui') || id.includes('@emotion')) return 'vendor-mui'
+            if (id.includes('framer-motion') || id.includes('lottie')) return 'vendor-anim'
+            if (id.includes('@reduxjs/toolkit') || id.includes('react-redux')) return 'vendor-redux'
+            if (id.includes('bootstrap') || id.includes('bootstrap-icons')) return 'vendor-bootstrap'
+            if (id.includes('lucide-react') || id.includes('react-icons')) return 'vendor-icons'
+            if (id.includes('axios')) return 'vendor-network'
+            if (id.includes('formik') || id.includes('yup')) return 'vendor-forms'
+            if (id.includes('react-slick') || id.includes('slick-carousel')) return 'vendor-ui'
+            return 'vendor'
           }
         }
       }

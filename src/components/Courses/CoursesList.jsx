@@ -16,8 +16,8 @@ const slugify = (text) =>
     .toLowerCase()
     .trim()
     .replace(/\s+/g, "-") // spaces → dashes
-    .replace(/[^\w\-]+/g, "") // remove special characters
-    .replace(/\-\-+/g, "-"); // multiple dashes → single dash
+    .replace(/[^\w-]+/g, "") // remove special characters
+    .replace(/--+/g, "-"); // multiple dashes → single dash
 
 const CoursesList = () => {
   const dispatch = useDispatch();

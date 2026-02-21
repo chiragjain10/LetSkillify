@@ -1,20 +1,21 @@
-import React from 'react'
-
-useEffect(()=>{
-    fetch('https://letskillify.com/backend/api/add-wishlist',{method:'POST', 
-      headers:'application/json',
-      body: JSON.stringify(wish)
-    }).then(resp=>{
-      if(!resp.ok) return console.error(resp)
-        else resp.json();
-    }).then(data => console.log(data,'data send sucessfully')
-    ).catch(reas=>{
-      console.error(reas)
-    })
-  })
+import React, { useEffect } from 'react'
 
   
 function wishlist() {
+    const wish = {}
+    useEffect(()=>{
+        fetch('https://letskillify.com/backend/api/add-wishlist',{
+          method:'POST', 
+          headers:'application/json',
+          body: JSON.stringify(wish)
+        }).then(resp=>{
+          if(!resp.ok) return console.error(resp)
+            else resp.json();
+        }).then(data => console.log(data,'data send sucessfully')
+        ).catch(reas=>{
+          console.error(reas)
+        })
+      },[])
     return (
         <>
 

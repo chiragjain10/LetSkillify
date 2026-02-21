@@ -4,9 +4,7 @@ import CallToAction from './callToAction'
 // import FeedBack from './FeedBack'
 import HomePopularCourses from './home_popular-courses'
 import HomeCourses from './homeCourses'
-import Signup from '../Auth/SignUp'
 import HomeAbout from './HomeAbout'
-import AdventureActivities from './Adventure'
 import OurWorks from './OurWorks'
 import TrustedPartners from './TrustedPartners'
 import Talkin from './Talkin'
@@ -34,7 +32,6 @@ function Home() {
       <HomeCourses />
       <OurWorks />
       <TrustedPartners />
-      {/* <AdventureActivities /> */}
       <CallToAction />
       <Blogs/>
 
