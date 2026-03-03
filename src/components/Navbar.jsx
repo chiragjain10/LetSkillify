@@ -208,7 +208,7 @@ function Navbar() {
             id="navbarCollapse"
             ref={navbarRef}
           >
-            <ul
+            {/* <ul
               className="navbar-nav navbar-nav-scroll me-auto"
               style={{ marginLeft: "10px" }}
             >
@@ -621,9 +621,9 @@ function Navbar() {
                   </li>
                 </ul>
               </li>
-            </ul>
+            </ul> */}
 
-            <ul className="navbar-nav navbar-nav-scroll me-auto">
+            <ul className="navbar-nav navbar-nav-scroll mx-auto">
               <li className="nav-item" >
                 <Link className="nav-link" aria-current="page" to="/">
                   Home
@@ -1027,7 +1027,7 @@ function Navbar() {
                         isLoggedIn ? "" : "mt-3"
                       }`}
                     >
-                      <div className="nav-item navbtn me-2 dropdown border rounded  btn btn-sm mb-0">
+                      <div className="nav-item navbtn me-2 dropdown rounded  btn btn-sm mb-0">
                         {isLoggedIn ? (
                           <Link
                             className="course-btn-enhanced flex-fill text-center"
@@ -1049,24 +1049,6 @@ function Navbar() {
                         )}
                       </div>
                     </div>
-                    {isLoggedIn ? (
-                      ""
-                    ) : (
-                      <div className="m-0 mt-3 p-0 w-auto nav-btns d-none">
-                        <div className="nav-item navbtn1 dropdown border rounded  btn btn-sm mb-0">
-                          <Link
-                            className="nav-link"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            to={
-                              "https://wa.me/+917987841662?text=Hii!%20LetSkillify"
-                            }
-                          >
-                            Call now
-                          </Link>
-                        </div>
-                      </div>
-                    )}
                   </div>
                 </div>
               </div>
@@ -1096,22 +1078,6 @@ function Navbar() {
               )}
             </div>
           </div>
-          {isLoggedIn ? (
-            ""
-          ) : (
-            <div className="logo-icon">
-              <div className="course-btn-enhanced course-btn-secondary flex-fill">
-                <Link
-                  className="nav-link"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  to={"https://wa.me/+917987841662?text=Hii!%20LetSkillify"}
-                >
-                  Call now
-                </Link>
-              </div>
-            </div>
-          )}
         </div>
       </nav>
     </>

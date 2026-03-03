@@ -77,61 +77,61 @@ function App() {
             <HelmetProvider>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<Suspense fallback={<div>Loading...</div>}><About /></Suspense>} />
-                <Route path="/courses" element={<Suspense fallback={<div>Loading...</div>}><CoursesList /></Suspense>} />
-                <Route path="/blogs" element={<Suspense fallback={<div>Loading...</div>}><BlogPage /></Suspense>} />
+                <Route path="/about" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><About /></Suspense>} />
+                <Route path="/courses" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><CoursesList /></Suspense>} />
+                <Route path="/blogs" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><BlogPage /></Suspense>} />
 
                 <Route
                   path="/courses/courseDetails/"
-                  element={<Suspense fallback={<div>Loading...</div>}><CourseDetail /></Suspense>}
+                  element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><CourseDetail /></Suspense>}
                 />
 
-                <Route path="/products" element={<Suspense fallback={<div>Loading...</div>}><Products /></Suspense>} />
+                <Route path="/products" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Products /></Suspense>} />
                 <Route
                   path="/products/productdetails/:id"
-                  element={<Suspense fallback={<div>Loading...</div>}><ProductsDetail /></Suspense>}
+                  element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><ProductsDetail /></Suspense>}
                 />
-                <Route path="/templates" element={<Suspense fallback={<div>Loading...</div>}><Templates /></Suspense>} />
+                <Route path="/templates" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Templates /></Suspense>} />
                 <Route
                   path="/templates/TemplatesDetail/:id"
-                  element={<Suspense fallback={<div>Loading...</div>}><TemplatesDetail /></Suspense>}
+                  element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><TemplatesDetail /></Suspense>}
                 />
-                <Route path="/contact" element={<Suspense fallback={<div>Loading...</div>}><ContactUs /></Suspense>} />
-                <Route path="/feedbacks" element={<Suspense fallback={<div>Loading...</div>}><Review /></Suspense>} />
-                <Route path="/founder" element={<Suspense fallback={<div>Loading...</div>}><Founder /></Suspense>} />
-                <Route path="/teammember" element={<Suspense fallback={<div>Loading...</div>}><TeamMember /></Suspense>} />
-                <Route path="/offering" element={<Suspense fallback={<div>Loading...</div>}><Offering /></Suspense>} />
-                <Route path="/certificate" element={<Suspense fallback={<div>Loading...</div>}><Certificate /></Suspense>} />
-                <Route path="/privacypolicy" element={<Suspense fallback={<div>Loading...</div>}><Privacy /></Suspense>} />
-                <Route path="/disclaimer" element={<Suspense fallback={<div>Loading...</div>}><Disclaimer /></Suspense>} />
-                <Route path="/term&Condition" element={<Suspense fallback={<div>Loading...</div>}><TermCondition /></Suspense>} />
-                <Route path="/becamemember" element={<Suspense fallback={<div>Loading...</div>}><Member /></Suspense>} />
-                <Route path="/signup" element={<Suspense fallback={<div>Loading...</div>}><SignUp /></Suspense>} />
-                <Route path="/login" element={<Suspense fallback={<div>Loading...</div>}><Login /></Suspense>} />
-                <Route path="/cart" element={<Suspense fallback={<div>Loading...</div>}><Cart /></Suspense>} />
-                <Route path="/wishlist" element={<Suspense fallback={<div>Loading...</div>}><Wishlist /></Suspense>} />
-                <Route path="/courses/courseDetails/:slug" element={<Suspense fallback={<div>Loading...</div>}><CourseDetail /></Suspense>} />
-                <Route path="/adminlogin" element={<Suspense fallback={<div>Loading...</div>}><AdminLogin /></Suspense>} />
+                <Route path="/contact" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><ContactUs /></Suspense>} />
+                <Route path="/feedbacks" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Review /></Suspense>} />
+                <Route path="/founder" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Founder /></Suspense>} />
+                <Route path="/teammember" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><TeamMember /></Suspense>} />
+                <Route path="/offering" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Offering /></Suspense>} />
+                <Route path="/certificate" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Certificate /></Suspense>} />
+                <Route path="/privacypolicy" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Privacy /></Suspense>} />
+                <Route path="/disclaimer" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Disclaimer /></Suspense>} />
+                <Route path="/term&Condition" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><TermCondition /></Suspense>} />
+                <Route path="/becamemember" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Member /></Suspense>} />
+                <Route path="/signup" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><SignUp /></Suspense>} />
+                <Route path="/login" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Login /></Suspense>} />
+                <Route path="/cart" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Cart /></Suspense>} />
+                <Route path="/wishlist" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Wishlist /></Suspense>} />
+                <Route path="/courses/courseDetails/:slug" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><CourseDetail /></Suspense>} />
+                <Route path="/adminlogin" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><AdminLogin /></Suspense>} />
 
-                <Route path="/celebration" element={<Suspense fallback={<div>Loading...</div>}><Celebration /></Suspense>} />
-                <Route path="/activities" element={<Suspense fallback={<div>Loading...</div>}><Activities /></Suspense>} />
-                <Route path="/adventure" element={<Suspense fallback={<div>Loading...</div>}><AdventureImage /></Suspense>} />
-                <Route path="/admin_dash" element={<Suspense fallback={<div>Loading...</div>}><AdminDashboard /></Suspense>} />
-                <Route path="/forgetpassword" element={<Suspense fallback={<div>Loading...</div>}><ForgetPassword /></Suspense>} />
+                <Route path="/celebration" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Celebration /></Suspense>} />
+                <Route path="/activities" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Activities /></Suspense>} />
+                <Route path="/adventure" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><AdventureImage /></Suspense>} />
+                <Route path="/admin_dash" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><AdminDashboard /></Suspense>} />
+                <Route path="/forgetpassword" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><ForgetPassword /></Suspense>} />
                 {/* Admin area with persistent sidebar */}
                 <Route path="/admin" element={<AdminLayout />}>
-                  <Route index element={<Suspense fallback={<div>Loading...</div>}><AdminHome /></Suspense>} />
-                  <Route path="users" element={<Suspense fallback={<div>Loading...</div>}><UsersAdmin /></Suspense>} />
-                  <Route path="courses" element={<Suspense fallback={<div>Loading...</div>}><CourseAdmin /></Suspense>} />
-                  <Route path="works" element={<Suspense fallback={<div>Loading...</div>}><WorksAdmin /></Suspense>} />
-                  <Route path="partners" element={<Suspense fallback={<div>Loading...</div>}><PartnersAdmin /></Suspense>} />
-                  <Route path="templates" element={<Suspense fallback={<div>Loading...</div>}><TemplatesAdmin /></Suspense>} />
-                  <Route path="certificates" element={<Suspense fallback={<div>Loading...</div>}><CertificateAdmin /></Suspense>} />
-                  <Route path="blogs" element={<Suspense fallback={<div>Loading...</div>}><BlogForm /></Suspense>} />
-                  <Route path="activities" element={<Suspense fallback={<div>Loading...</div>}><ActivityForm /></Suspense>} />
-                  <Route path="celebrations" element={<Suspense fallback={<div>Loading...</div>}><CelebrationForm /></Suspense>} />
-                  <Route path="adventures" element={<Suspense fallback={<div>Loading...</div>}><AdventureForm /></Suspense>} />
-                  <Route path="team" element={<Suspense fallback={<div>Loading...</div>}><TeamForm /></Suspense>} />
+                  <Route index element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><AdminHome /></Suspense>} />
+                  <Route path="users" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><UsersAdmin /></Suspense>} />
+                  <Route path="courses" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><CourseAdmin /></Suspense>} />
+                  <Route path="works" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><WorksAdmin /></Suspense>} />
+                  <Route path="partners" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><PartnersAdmin /></Suspense>} />
+                  <Route path="templates" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><TemplatesAdmin /></Suspense>} />
+                  <Route path="certificates" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><CertificateAdmin /></Suspense>} />
+                  <Route path="blogs" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><BlogForm /></Suspense>} />
+                  <Route path="activities" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><ActivityForm /></Suspense>} />
+                  <Route path="celebrations" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><CelebrationForm /></Suspense>} />
+                  <Route path="adventures" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><AdventureForm /></Suspense>} />
+                  <Route path="team" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><TeamForm /></Suspense>} />
                 </Route>
                 <Route path="/blog/:id" element={<BlogDetail />} />
                 <Route path="/*" element={<NotFound />} />

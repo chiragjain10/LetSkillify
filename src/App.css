@@ -470,7 +470,7 @@ nav .logo-icon .loginbtn1:hover {
   color: white;
 }
 .navbtn {
-  background: #066ac9;
+  /* background: #066ac9; */
   color: white !important;
 }
 .navbtn .nav-link {

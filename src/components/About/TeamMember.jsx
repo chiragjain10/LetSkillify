@@ -31,7 +31,7 @@ function TeamMember() {
   if (loading) {
     return (
       <div className="container">
-        <h1 className="text-center my-5">Loading Team...</h1>
+        <h1 className="text-center my-5" style={{ height: "100vh" }}>Loading Team...</h1>
       </div>
     );
   }

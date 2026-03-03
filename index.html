@@ -7,7 +7,7 @@
   <!-- Meta Tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  
+
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -67,13 +67,15 @@
     href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" />
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0/css/all.min.css" integrity="sha512-QfDd74mlg8afgSqm3Vq2Q65e9b3xMhJB4GZ9OcHDVy1hZ6pqBJPWWnMsKDXM7NINoKqJANNGBuVRIpIJ5dogfA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0/css/all.min.css"
+    integrity="sha512-QfDd74mlg8afgSqm3Vq2Q65e9b3xMhJB4GZ9OcHDVy1hZ6pqBJPWWnMsKDXM7NINoKqJANNGBuVRIpIJ5dogfA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Plugins CSS -->
   <link rel="stylesheet" type="text/css" href="./assets/vendor/font-awesome/css/all.min.css" />
   <link rel="stylesheet" type="text/css" href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" />
   <link rel="stylesheet" type="text/css" href="./assets/vendor/aos/aos.css" />
-  
+
   <!-- Theme CSS -->
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 
@@ -85,20 +87,36 @@
     gtag('js', new Date());
     gtag('config', 'G-N20Z6LCDX2');
   </script>
-  
+
   <!-- Facebook Pixel -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1137082604535111');
     fbq('track', 'PageView');
   </script>
+
+  <style>
+    .FIrstLoading {
+      height: 100vh !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #066ac9;
+    }
+  </style>
 </head>
 
 <body>
@@ -106,7 +124,8 @@
   <script type="module" src="./src/main.jsx"></script>
 
   <!-- Vendors -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous" onerror="(function(){var s=document.createElement('script');s.src='https://unpkg.com/jquery@3.7.1/dist/jquery.min.js';document.head.appendChild(s)})();"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js" crossorigin="anonymous"
+    onerror="(function(){var s=document.createElement('script');s.src='https://unpkg.com/jquery@3.7.1/dist/jquery.min.js';document.head.appendChild(s)})();"></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs@1.5.0/dist/purecounter_vanilla.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -125,12 +144,12 @@
       }
     };
   </script>
-  
+
   <noscript>
     <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1137082604535111&ev=PageView&noscript=1"/>
+      src="https://www.facebook.com/tr?id=1137082604535111&ev=PageView&noscript=1" />
   </noscript>
-  
+
   <!-- Template Functions -->
   <script src="./assets/js/functions.js"></script>
 </body>
