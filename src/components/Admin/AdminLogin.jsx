@@ -1,5 +1,5 @@
 // src/pages/AdminLogin.jsx
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
@@ -10,6 +10,13 @@ const AdminLogin = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const token = localStorage.getItem("ls_admin_auth");
+    if (token) {
+      navigate("/admin", { replace: true });
+    }
+  }, [navigate]);
+
   const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
@@ -18,8 +25,8 @@ const AdminLogin = () => {
       // Sign in with Firebase Authentication
       await signInWithEmailAndPassword(auth, email, password);
 
-      // If successful, navigate to admin dashboard
-      navigate("/admin_dash");
+      localStorage.setItem("ls_admin_auth", "1");
+      navigate("/admin", { replace: true });
     } catch (err) {
       // Show error if login fails
       setError("Invalid email or password.");

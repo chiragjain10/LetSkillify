@@ -136,7 +136,7 @@ const BlogDetail = () => {
           <Col lg={8}>
             <Card className="border-0 shadow-sm p-4">
               <Card.Body>
-                <h1 className="fw-bold mb-3">{blog.title}</h1>
+                <h1 className="fw-bold mb-3 h3">{blog.title}</h1>
                 <div className="d-flex flex-wrap gap-3 mb-4 text-muted">
                   {blog.category && <Badge bg="info">{blog.category}</Badge>}
                   {blog.author && <span>✍️ {blog.author}</span>}
@@ -145,10 +145,11 @@ const BlogDetail = () => {
                 </div>
 
                 <Card.Text
-                  className="fs-5"
+                  className=""
                   style={{ lineHeight: "1.8", color: "#444" }}
+                  dangerouslySetInnerHTML={{ __html: blog.content }}
                 >
-                  {blog.content}
+                  {/* {blog.content} */}
                 </Card.Text>
 
                 {/* Back Button */}

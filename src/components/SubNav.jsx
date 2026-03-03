@@ -7,6 +7,11 @@ const SubNav = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
+    const token = localStorage.getItem("ls_admin_auth");
+    if (token) {
+      setUser({});
+      return;
+    }
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });

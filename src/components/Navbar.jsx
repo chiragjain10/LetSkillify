@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import "../App.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Cookies from "js-cookie";
 import courses from "./Json product/course-list";
 import { MainContext } from "./Cart/MainProvider";
 import RegisterForm from "./RegisterForm";
@@ -34,19 +33,15 @@ function Navbar() {
   const { setVisible } = useContext(MainContext);
 
   useEffect(() => {
-    const user = Cookies.get("cookies");
-    if (user) {
-      setIsLoggedIn(true);
-    } else {
-      setIsLoggedIn(false);
-    }
+    const token = localStorage.getItem("ls_admin_auth");
+    setIsLoggedIn(!!token);
   }, []);
 
   // Handle logout
   const handleLogout = () => {
-    Cookies.remove("Logincookie"); // Remove the user cookie
+    localStorage.removeItem("ls_admin_auth");
     setIsLoggedIn(false);
-    navigate("/login"); // Redirect to login page
+    navigate("/adminlogin");
     window.location.reload();
   };
 

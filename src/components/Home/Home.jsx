@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Banner from './Banner'
 import CallToAction from './callToAction'
 // import FeedBack from './FeedBack'
@@ -11,7 +11,7 @@ import Talkin from './Talkin'
 import AiCourses from './AiCourses'
 
 import { Helmet } from "react-helmet-async";
-import Blogs from '../Blog/Blogs'
+const HomeBlogs = React.lazy(() => import('../Blog/Blogs'))
 
 function Home() {
   return (
@@ -33,7 +33,9 @@ function Home() {
       <OurWorks />
       <TrustedPartners />
       <CallToAction />
-      <Blogs/>
+      <Suspense fallback={null}>
+        <HomeBlogs />
+      </Suspense>
 
       <Talkin />
       {/* <FeedBack /> */}

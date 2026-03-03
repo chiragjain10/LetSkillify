@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect, lazy, Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Navbar from "./components/Navbar.jsx";
@@ -55,6 +55,18 @@ const CelebrationForm = lazy(() => import("./components/Admin/CelebrationAdmin.j
 const AdventureForm = lazy(() => import("./components/Admin/AdventureAdmin.jsx"));
 const TeamForm = lazy(() => import("./components/Admin/TeamAdmin.jsx"));
 
+function isAdminLoggedIn() {
+  return !!localStorage.getItem("ls_admin_auth");
+}
+
+function RequireAdmin({ children }) {
+  return isAdminLoggedIn() ? children : <Navigate to="/adminlogin" replace />;
+}
+
+function PublicOnly({ children }) {
+  return isAdminLoggedIn() ? <Navigate to="/admin" replace /> : children;
+}
+
 function App() {
   const [bootLoading, setBootLoading] = React.useState(true);
   React.useEffect(() => {
@@ -71,7 +83,7 @@ function App() {
     <>
       <div>
         <MainProvider>
-          <Suspense fallback={<Preloader />}>
+          <Suspense fallback={<div className="FIrstLoading">Loading...</div>}>
             <TopScroll />
             <Navbar />
             <HelmetProvider>
@@ -111,15 +123,36 @@ function App() {
                 <Route path="/cart" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Cart /></Suspense>} />
                 <Route path="/wishlist" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Wishlist /></Suspense>} />
                 <Route path="/courses/courseDetails/:slug" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><CourseDetail /></Suspense>} />
-                <Route path="/adminlogin" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><AdminLogin /></Suspense>} />
+                <Route
+                  path="/adminlogin"
+                  element={
+                    <PublicOnly>
+                      <Suspense fallback={<div className="FIrstLoading">Loading...</div>}><AdminLogin /></Suspense>
+                    </PublicOnly>
+                  }
+                />
 
                 <Route path="/celebration" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Celebration /></Suspense>} />
                 <Route path="/activities" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><Activities /></Suspense>} />
                 <Route path="/adventure" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><AdventureImage /></Suspense>} />
-                <Route path="/admin_dash" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><AdminDashboard /></Suspense>} />
+                <Route
+                  path="/admin_dash"
+                  element={
+                    <RequireAdmin>
+                      <Suspense fallback={<div className="FIrstLoading">Loading...</div>}><AdminDashboard /></Suspense>
+                    </RequireAdmin>
+                  }
+                />
                 <Route path="/forgetpassword" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><ForgetPassword /></Suspense>} />
                 {/* Admin area with persistent sidebar */}
-                <Route path="/admin" element={<AdminLayout />}>
+                <Route
+                  path="/admin"
+                  element={
+                    <RequireAdmin>
+                      <AdminLayout />
+                    </RequireAdmin>
+                  }
+                >
                   <Route index element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><AdminHome /></Suspense>} />
                   <Route path="users" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><UsersAdmin /></Suspense>} />
                   <Route path="courses" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><CourseAdmin /></Suspense>} />

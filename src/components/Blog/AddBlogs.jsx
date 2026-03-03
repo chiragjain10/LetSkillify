@@ -3,6 +3,7 @@ import { Container, Form, Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { db } from "../../firebase";
 import { collection, addDoc } from "firebase/firestore";
+import { Editor } from "@tinymce/tinymce-react";
 
 // ✅ Cloudinary config
 const CLOUD_NAME = "dob3psxy1";
@@ -92,13 +93,47 @@ const BlogForm = () => {
           {/* Content */}
           <Form.Group className="mb-3">
             <Form.Label>Full Content</Form.Label>
-            <Form.Control
-              as="textarea"
-              rows={5}
-              placeholder="Write full blog content"
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-            />
+            <div className="border rounded">
+              <Editor
+                apiKey='fyliq0cjbctqb3mtuka0gznhq60oqj2j9seqkjtee5evz7fo'
+                value={content}
+                onEditorChange={(newValue) => setContent(newValue)}
+                init={{
+                  height: 400,
+                  menubar: false,
+                  plugins: [
+                    "advlist",
+                    "autolink",
+                    "lists",
+                    "link",
+                    "image",
+                    "charmap",
+                    "preview",
+                    "anchor",
+                    "searchreplace",
+                    "visualblocks",
+                    "code",
+                    "fullscreen",
+                    "insertdatetime",
+                    "media",
+                    "table",
+                    "help",
+                    "wordcount",
+                  ],
+                  toolbar:
+                    "undo redo | formatselect | bold italic underline | " +
+                    "alignleft aligncenter alignright alignjustify | " +
+                    "bullist numlist outdent indent | link image table | removeformat",
+                  mobile: {
+                    menubar: false,
+                    toolbar:
+                      "undo redo | bold italic | bullist numlist | link",
+                  },
+                  content_style:
+                    "body { font-family: Heebo, Roboto, Arial, sans-serif; font-size: 16px }",
+                }}
+              />
+            </div>
           </Form.Group>
 
           {/* Image Upload */}

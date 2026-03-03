@@ -4551,3 +4551,7 @@ nav .logo-icon .loginbtn1:hover {
   padding: 0px !important;
   }
 }
+
+.card-text h3, .card-text h4, .card-text h1, .card-text h2{
+  font-size: 1.5rem;
+}
