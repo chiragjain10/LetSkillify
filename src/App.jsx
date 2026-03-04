@@ -54,6 +54,8 @@ const ActivityForm = lazy(() => import("./components/Admin/ActivitiesAdmin.jsx")
 const CelebrationForm = lazy(() => import("./components/Admin/CelebrationAdmin.jsx"));
 const AdventureForm = lazy(() => import("./components/Admin/AdventureAdmin.jsx"));
 const TeamForm = lazy(() => import("./components/Admin/TeamAdmin.jsx"));
+const BlogsAdminList = lazy(() => import("./components/Admin/BlogsAdminList.jsx"));
+const BlogEditAdmin = lazy(() => import("./components/Admin/BlogEdit.jsx"));
 
 function isAdminLoggedIn() {
   return !!localStorage.getItem("ls_admin_auth");
@@ -160,13 +162,15 @@ function App() {
                   <Route path="partners" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><PartnersAdmin /></Suspense>} />
                   <Route path="templates" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><TemplatesAdmin /></Suspense>} />
                   <Route path="certificates" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><CertificateAdmin /></Suspense>} />
-                  <Route path="blogs" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><BlogForm /></Suspense>} />
+                  <Route path="blogs" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><BlogsAdminList /></Suspense>} />
+                  <Route path="blogs/new" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><BlogForm /></Suspense>} />
+                  <Route path="blogs/:id/edit" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><BlogEditAdmin /></Suspense>} />
                   <Route path="activities" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><ActivityForm /></Suspense>} />
                   <Route path="celebrations" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><CelebrationForm /></Suspense>} />
                   <Route path="adventures" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><AdventureForm /></Suspense>} />
                   <Route path="team" element={<Suspense fallback={<div className="FIrstLoading">Loading...</div>}><TeamForm /></Suspense>} />
                 </Route>
-                <Route path="/blog/:id" element={<BlogDetail />} />
+                <Route path="/blog/:slug" element={<BlogDetail />} />
                 <Route path="/*" element={<NotFound />} />
               </Routes>
             </HelmetProvider>

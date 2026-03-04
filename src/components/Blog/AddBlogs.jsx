@@ -13,12 +13,29 @@ const BlogForm = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [content, setContent] = useState("");
+  const [metaTitle, setMetaTitle] = useState("");
+  const [metaDescription, setMetaDescription] = useState("");
+  const [keywordsText, setKeywordsText] = useState("");
   const [imgFile, setImgFile] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  const slugify = (str) =>
+    str
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate SEO fields
+    if (!metaTitle || !metaDescription || !keywordsText) {
+      alert("Please fill in all SEO fields");
+      return;
+    }
 
     if (!title || !desc || !content || !imgFile) {
       alert("Please fill in all fields and select an image");
@@ -44,11 +61,23 @@ const BlogForm = () => {
       const data = await response.json();
       const imageUrl = data.secure_url;
 
+      const slugBase = slugify(title);
+      const unique = Math.random().toString(36).slice(2, 6);
+      const slug = `${slugBase}-${unique}`;
+      const keywords = keywordsText
+        .split(",")
+        .map((k) => k.trim())
+        .filter((k) => k.length > 0);
+
       // ✅ Save blog in Firestore
       await addDoc(collection(db, "blogs"), {
         title,
         desc,
         content,
+        metaTitle: metaTitle || title,
+        metaDescription: metaDescription || desc,
+        keywords,
+        slug,
         img: imageUrl,
         createdAt: new Date(),
       });
@@ -134,6 +163,41 @@ const BlogForm = () => {
                 }}
               />
             </div>
+          </Form.Group>
+
+          {/* SEO Meta Title */}
+          <Form.Group className="mb-3">
+            <Form.Label>Meta Title</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="SEO title"
+              value={metaTitle}
+              onChange={(e) => setMetaTitle(e.target.value)}
+            />
+          </Form.Group>
+
+          {/* SEO Meta Description */}
+          <Form.Group className="mb-3">
+            <Form.Label>Meta Description</Form.Label>
+            <Form.Control
+              as="textarea"
+              rows={3}
+              placeholder="SEO description"
+              value={metaDescription}
+              onChange={(e) => setMetaDescription(e.target.value)}
+            />
+          </Form.Group>
+
+          {/* Keywords (comma-separated) */}
+          <Form.Group className="mb-3">
+            <Form.Label>Keywords</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Comma-separated keywords"
+              value={keywordsText}
+              onChange={(e) => setKeywordsText(e.target.value)}
+            />
+            <div className="form-text">Example: full stack, web development, react</div>
           </Form.Group>
 
           {/* Image Upload */}

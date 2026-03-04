@@ -10,7 +10,7 @@ import {
   Badge,
   Form,
 } from "react-bootstrap";
-import { db } from "../../firebase"; // ✅ adjust path
+import { db } from "../../firebase";
 import {
   doc,
   getDoc,
@@ -20,7 +20,10 @@ import {
   orderBy,
   onSnapshot,
   serverTimestamp,
+  where,
+  getDocs,
 } from "firebase/firestore";
+import { Helmet } from "react-helmet-async";
 
 // 🔹 Helper function for "time ago"
 const timeAgo = (timestamp) => {
@@ -35,45 +38,50 @@ const timeAgo = (timestamp) => {
 };
 
 const BlogDetail = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [docId, setDocId] = useState(null);
 
   // ✅ Comments state
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState({ name: "", text: "" });
   const [submitting, setSubmitting] = useState(false);
 
-  // ✅ Fetch single blog
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const docRef = doc(db, "blogs", id);
-        const docSnap = await getDoc(docRef);
-
-        if (docSnap.exists()) {
-          setBlog({ id: docSnap.id, ...docSnap.data() });
+        const q = query(collection(db, "blogs"), where("slug", "==", slug));
+        const qs = await getDocs(q);
+        if (!qs.empty) {
+          const snap = qs.docs[0];
+          setDocId(snap.id);
+          setBlog({ id: snap.id, ...snap.data() });
+          setLoading(false);
+          return;
+        }
+        const byIdRef = doc(db, "blogs", slug);
+        const byIdSnap = await getDoc(byIdRef);
+        if (byIdSnap.exists()) {
+          setDocId(byIdSnap.id);
+          setBlog({ id: byIdSnap.id, ...byIdSnap.data() });
         } else {
           setBlog(null);
         }
       } catch (error) {
-        console.error("Error fetching blog:", error);
         setBlog(null);
       } finally {
         setLoading(false);
       }
     };
-
     fetchBlog();
-  }, [id]);
+  }, [slug]);
 
   // ✅ Fetch comments in real-time
   useEffect(() => {
-    if (!id) return;
-
-    const commentsRef = collection(db, "blogs", id, "comments");
+    if (!docId) return;
+    const commentsRef = collection(db, "blogs", docId, "comments");
     const q = query(commentsRef, orderBy("createdAt", "desc"));
-
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const commentsData = snapshot.docs.map((doc) => ({
         id: doc.id,
@@ -81,9 +89,8 @@ const BlogDetail = () => {
       }));
       setComments(commentsData);
     });
-
     return () => unsubscribe();
-  }, [id]);
+  }, [docId]);
 
   // ✅ Handle new comment submit
   const handleCommentSubmit = async (e) => {
@@ -120,6 +127,16 @@ const BlogDetail = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{blog.metaTitle || blog.title}</title>
+        <meta name="description" content={blog.metaDescription || blog.desc || ""} />
+        {Array.isArray(blog.keywords) && blog.keywords.length > 0 && (
+          <meta name="keywords" content={blog.keywords.join(", ")} />
+        )}
+        <meta property="og:title" content={blog.metaTitle || blog.title} />
+        <meta property="og:description" content={blog.metaDescription || blog.desc || ""} />
+        {blog.img && <meta property="og:image" content={blog.img} />}
+      </Helmet>
       {/* Banner */}
       <div
         style={{

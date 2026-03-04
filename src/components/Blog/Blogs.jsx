@@ -143,7 +143,7 @@ const Blogs = () => {
                       <Card.Body>
                         <Card.Title>{blog.title}</Card.Title>
                         <Card.Text>{blog.desc}</Card.Text>
-                        <Link to={`/blog/${blog.id}`}>
+                        <Link to={`/blog/${blog.slug || blog.id}`}>
                           <Button variant="primary">Read More</Button>
                         </Link>
                       </Card.Body>
