@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { db } from "../../firebase";
-import { collection, getDocs, orderBy, query, deleteDoc, doc } from "firebase/firestore";
+import { collection, getDocs, orderBy, query, deleteDoc, doc, updateDoc, serverTimestamp } from "firebase/firestore";
 
 export default function BlogsAdminList() {
   const [items, setItems] = useState([]);
@@ -31,6 +31,14 @@ export default function BlogsAdminList() {
     await load();
   };
 
+  const handlePublishNow = async (id) => {
+    await updateDoc(doc(db, "blogs", id), {
+      status: "published",
+      publishAt: serverTimestamp(),
+    });
+    await load();
+  };
+
   return (
     <div className="p-3">
       <div className="d-flex justify-content-between align-items-center mb-3">
@@ -50,6 +58,8 @@ export default function BlogsAdminList() {
               <tr>
                 <th>Title</th>
                 <th>Slug</th>
+                <th>Status</th>
+                <th>Publish At</th>
                 <th>Created</th>
                 <th className="text-end">Actions</th>
               </tr>
@@ -59,6 +69,8 @@ export default function BlogsAdminList() {
                 <tr key={b.id}>
                   <td>{b.title}</td>
                   <td>{b.slug}</td>
+                  <td>{b.status || "published"}</td>
+                  <td>{b.publishAt?.toDate ? new Date(b.publishAt.toDate()).toLocaleString() : "-"}</td>
                   <td>{b.createdAt ? new Date(b.createdAt.seconds * 1000).toLocaleDateString() : "-"}</td>
                   <td className="text-end">
                     <button className="btn btn-outline-secondary btn-sm me-2" onClick={() => navigate(`/blog/${b.slug || b.id}`)}>
@@ -67,6 +79,11 @@ export default function BlogsAdminList() {
                     <button className="btn btn-warning btn-sm me-2" onClick={() => navigate(`/admin/blogs/${b.id}/edit`)}>
                       Edit
                     </button>
+                    {b.status === "scheduled" && (
+                      <button className="btn btn-success btn-sm me-2" onClick={() => handlePublishNow(b.id)}>
+                        Publish Now
+                      </button>
+                    )}
                     <button className="btn btn-danger btn-sm" onClick={() => handleDelete(b.id)}>
                       Delete
                     </button>

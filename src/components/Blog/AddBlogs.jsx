@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Form, Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { db } from "../../firebase";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp, Timestamp } from "firebase/firestore";
 import { Editor } from "@tinymce/tinymce-react";
 
 // ✅ Cloudinary config
@@ -20,6 +20,10 @@ const BlogForm = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  const [scheduleEnabled, setScheduleEnabled] = useState(false);
+  const [publishDate, setPublishDate] = useState("");
+  const [publishTime, setPublishTime] = useState("");
+
   const slugify = (str) =>
     str
       .toLowerCase()
@@ -30,6 +34,11 @@ const BlogForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (scheduleEnabled && (!publishDate || !publishTime)) {
+      alert("Please select schedule date and time");
+      return;
+    }
 
     // Validate SEO fields
     if (!metaTitle || !metaDescription || !keywordsText) {
@@ -69,6 +78,14 @@ const BlogForm = () => {
         .map((k) => k.trim())
         .filter((k) => k.length > 0);
 
+      let publishAtTs = serverTimestamp();
+      let status = "published";
+      if (scheduleEnabled) {
+        const dt = new Date(`${publishDate}T${publishTime}:00`);
+        publishAtTs = Timestamp.fromDate(dt);
+        status = "scheduled";
+      }
+
       // ✅ Save blog in Firestore
       await addDoc(collection(db, "blogs"), {
         title,
@@ -79,7 +96,9 @@ const BlogForm = () => {
         keywords,
         slug,
         img: imageUrl,
-        createdAt: new Date(),
+        createdAt: serverTimestamp(),
+        publishAt: publishAtTs,
+        status,
       });
 
       alert("Blog added successfully ✅");
@@ -199,6 +218,37 @@ const BlogForm = () => {
             />
             <div className="form-text">Example: full stack, web development, react</div>
           </Form.Group>
+
+          {/* Schedule a Post */}
+          <Form.Group className="mb-3">
+            <Form.Check
+              type="switch"
+              id="schedule-switch"
+              label="Schedule this post"
+              checked={scheduleEnabled}
+              onChange={(e) => setScheduleEnabled(e.target.checked)}
+            />
+          </Form.Group>
+          {scheduleEnabled && (
+            <div className="row g-2 mb-3">
+              <div className="col-md-6">
+                <Form.Label>Schedule Date</Form.Label>
+                <Form.Control
+                  type="date"
+                  value={publishDate}
+                  onChange={(e) => setPublishDate(e.target.value)}
+                />
+              </div>
+              <div className="col-md-6">
+                <Form.Label>Schedule Time</Form.Label>
+                <Form.Control
+                  type="time"
+                  value={publishTime}
+                  onChange={(e) => setPublishTime(e.target.value)}
+                />
+              </div>
+            </div>
+          )}
 
           {/* Image Upload */}
           <Form.Group className="mb-3">

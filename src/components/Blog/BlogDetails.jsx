@@ -125,6 +125,11 @@ const BlogDetail = () => {
     return <h2 className="text-center mt-5 text-danger">Blog Not Found</h2>;
   }
 
+  const now = new Date();
+  if (blog.status === "scheduled" && blog.publishAt?.toDate && blog.publishAt.toDate() > now) {
+    return <h2 className="text-center mt-5 text-muted">This article is scheduled and not yet published.</h2>;
+  }
+
   return (
     <>
       <Helmet>

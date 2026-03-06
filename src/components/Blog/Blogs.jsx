@@ -32,7 +32,20 @@ const Blogs = () => {
           ...doc.data(),
         }));
 
-        setBlogs(blogsData);
+        const now = new Date();
+        const visible = blogsData.filter((b) => {
+          if (b.status === "scheduled" && b.publishAt && b.publishAt.toDate && b.publishAt.toDate() > now) {
+            return false;
+          }
+          return true;
+        });
+        visible.sort((a, b) => {
+          const aDate = a.publishAt?.toDate ? a.publishAt.toDate() : a.createdAt?.toDate ? a.createdAt.toDate() : 0;
+          const bDate = b.publishAt?.toDate ? b.publishAt.toDate() : b.createdAt?.toDate ? b.createdAt.toDate() : 0;
+          return bDate - aDate;
+        });
+
+        setBlogs(visible);
       } catch (error) {
         console.error("Error fetching blogs:", error);
       } finally {
