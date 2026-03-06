@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /admin
+Disallow: /admin/
+Disallow: /admin/*
+Disallow: /adminlogin
+Disallow: /admin_dash
+Disallow: /login
+Disallow: /signup
+Disallow: /forgetpassword
+Disallow: /cart
+Disallow: /wishlist
+Disallow: /privacypolicy
+Disallow: /disclaimer
+Disallow: /term&Condition
+Allow: /
+
+Sitemap: https://letskillify.com/sitemap.xml
