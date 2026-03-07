@@ -102,7 +102,7 @@ export default function BlogEdit() {
         <div className="mb-3">
           <label className="form-label">Full Content</label>
           <div className="border rounded">
-            <Editor value={content} onEditorChange={(v) => setContent(v)} init={{ height: 400, menubar: false }} />
+            <Editor apiKey='fyliq0cjbctqb3mtuka0gznhq60oqj2j9seqkjtee5evz7fo' value={content} onEditorChange={(v) => setContent(v)} init={{ height: 400, menubar: false }} />
           </div>
         </div>
         <div className="mb-3">
